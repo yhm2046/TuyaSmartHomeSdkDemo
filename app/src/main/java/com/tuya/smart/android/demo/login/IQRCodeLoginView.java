@@ -4,7 +4,7 @@ import android.graphics.Bitmap;
 
 /**
  * @author xushun
- * @Des:
+ * @Des:    二维码登录接口
  * @data 2019/4/5.
  */
 public interface IQRCodeLoginView {

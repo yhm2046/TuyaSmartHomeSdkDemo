@@ -23,6 +23,7 @@ import com.wnafee.vector.compat.VectorDrawable;
 
 /**
  * Created by letian on 16/7/18.
+ * 主页
  */
 public class HomeActivity extends BaseActivity implements IHomeView {
     private static final String TAG = "HomeActivity";

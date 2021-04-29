@@ -14,7 +14,7 @@ import static android.graphics.Color.BLACK;
 
 /**
  * @author xushun
- * @Des:
+ * @Des:    生成二维码的方法
  * @data 2019/4/5.
  */
 public class QRCodeUtils {

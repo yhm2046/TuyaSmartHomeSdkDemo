@@ -31,7 +31,7 @@ public class QRCodeLoginActivity extends BaseActivity implements IQRCodeLoginVie
     TextView tvQrAppInfo;
     Context context;
     QRcodeLoginPresenter presenter;
-    private String token;
+//    private String token;
 
     @Override
 

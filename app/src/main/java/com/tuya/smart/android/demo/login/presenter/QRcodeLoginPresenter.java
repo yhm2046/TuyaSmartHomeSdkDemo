@@ -20,7 +20,7 @@ import static com.tuya.smart.android.demo.login.model.QRCodeLoginModel.GET_TOKEN
 
 /**
  * @author xushun
- * @Des:
+ * @Des: 二维码登录演示
  * @data 2019/4/5.
  */
 public class QRcodeLoginPresenter extends BasePresenter {
@@ -32,7 +32,7 @@ public class QRcodeLoginPresenter extends BasePresenter {
     private String token;
     private Context context;
 
-    private boolean isLooping = false;
+    private boolean isLooping = false;  //是否轮询
 
     public QRcodeLoginPresenter(Context context, IQRCodeLoginView view) {
         this.context = context;
@@ -52,7 +52,7 @@ public class QRcodeLoginPresenter extends BasePresenter {
             case GET_TOKEN_SUCCESS:
                 token = ((Result) msg.obj).getObj().toString();
                 L.d(TAG, "token: " + token);
-                String scheme = "tuyaSmart--qrLogin?token=" + token;
+                String scheme = "tuyaSmart--qrLogin?token=" + token;    //使用指定格式生成二维码
                 L.i(TAG, "scheme: " + scheme);
                 try {
                     Bitmap bitmap = QRCodeUtils.createQRCode(scheme, 1080);

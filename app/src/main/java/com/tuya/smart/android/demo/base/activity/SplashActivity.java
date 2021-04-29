@@ -21,11 +21,12 @@ import com.tuya.smart.home.sdk.TuyaHomeSdk;
  * Created by letian on 16/7/19.
  */
 public class SplashActivity extends Activity {
+    private String TAG="SplashActivity tag";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        L.d("splash", "tuyaTime: " + TuyaUtil.formatDate(System.currentTimeMillis(), "yyyy-mm-dd hh:mm:ss"));
+        L.d(TAG, "tuyaTime: " + TuyaUtil.formatDate(System.currentTimeMillis(), "yyyy-mm-dd hh:mm:ss"));
 
         if (isInitAppkey()) {
             gotoLogin();
@@ -52,7 +53,7 @@ public class SplashActivity extends Activity {
             }
         });
     }
-
+//初始化appkey,判断是否有TUYA_SMART_APPKEY和TUYA_SMART_SECRET
     private boolean isInitAppkey() {
         String appkey = getInfo("TUYA_SMART_APPKEY", this);
         String appSecret = getInfo("TUYA_SMART_SECRET", this);

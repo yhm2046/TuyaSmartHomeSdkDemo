@@ -16,13 +16,13 @@ import com.tuya.smart.home.sdk.TuyaHomeSdk;
 
 /**
  * @author xushun
- * @Des:
+ * @Des:    二维码登录model
  * @data 2019/4/5.
  */
 public class QRCodeLoginModel extends BaseModel implements IQRCodeModel {
 
-    public static final int GET_TOKEN_SUCCESS = 0;
-    public static final int GET_TOKEN_FAILED = 1;
+    public static final int GET_TOKEN_SUCCESS = 0;  //获取token成功
+    public static final int GET_TOKEN_FAILED = 1;   //获取token失败
     public static final int GET_LOOP_TOKEN_SUCCESS = 2;
     public static final int GET_LOOP_TOKEN_FAILED = 3;
     public static final int GET_QR_TOKEN_LOGIN_FAILED = 4;
